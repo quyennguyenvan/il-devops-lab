@@ -1,0 +1,63 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "EnableIAMUserPermissions",
+            "Effect": "Allow",
+            "Action": "kms:*",
+            "Resource": "*",
+            "Condition" : { "StringEquals" : { "aws:username" : "root" }}
+        },
+        {
+            "Sid": "AllowaccessforKeyAdministrators",
+            "Effect": "Allow",
+            "Action": [
+                "kms:Create*",
+                "kms:Describe*",
+                "kms:Enable*",
+                "kms:List*",
+                "kms:Put*",
+                "kms:Update*",
+                "kms:Revoke*",
+                "kms:Disable*",
+                "kms:Get*",
+                "kms:Delete*",
+                "kms:TagResource",
+                "kms:UntagResource",
+                "kms:ScheduleKeyDeletion",
+                "kms:CancelKeyDeletion"
+            ],
+            "Resource": "*",
+            "Condition" : { "StringEquals" : { "aws:username" : "${username}" }}
+        },
+        {
+            "Sid": "Allowuseofthekey",
+            "Effect": "Allow",
+            "Action": [
+                "kms:Encrypt",
+                "kms:Decrypt",
+                "kms:ReEncrypt*",
+                "kms:DescribeKey",
+                "kms:GetPublicKey"
+            ],
+            "Resource": "*",
+            "Condition" : { "StringEquals" : { "aws:username" : "${username}" }}
+        },
+        {
+            "Sid": "Allowattachmentofpersistentresources",
+            "Effect": "Allow",
+            "Action": [
+                "kms:CreateGrant",
+                "kms:ListGrants",
+                "kms:RevokeGrant"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "Bool": {
+                    "kms:GrantIsForAWSResource": "true"
+                },
+                "StringEquals" : { "aws:username" : "${username}" }
+            }
+        }
+    ]
+}
