@@ -16,34 +16,50 @@ variable "prefix"{
 variable "aws-linux2" {
     default = "ami-0b276ad63ba2d6009"
 }
-variable "instance-size" {
+variable "instancesize" {
     default = "t2.small"
 }
 variable "currentIPACCESS"{
     default = "183.81.127.210/32"
 }
 
-variable "vpc_cidr"{
-    default = "10.0.10.0/24"
-}
+
 variable "azonea"{
     default = "ap-northeast-1a"
 }
+variable "azonec"{
+    default = "ap-northeast-1c"
+}
+variable "vpc_cidr"{
+    default = "10.0.10.0/24"
+}
 variable "azonea_instance_cidr"{
-    default = "10.0.10.32/27"
+    default = "10.0.10.64/26"
 }
 
 variable "azonea_db_cidr"{
-    default = "10.0.10.128/28"
+    default = "10.0.10.160/27"
+}
+variable "azonec_db_cidr"{
+    default = "10.0.10.208/28"
 }
 
 #for rds postgresql config
+variable username{
+    description = "The default username for rds"
+    type = string
+    default = "zerotrustAdmin"
+}
 variable "identifier_db"{
     description = "The default init of db instance"
     type = string
-    default = "il_db_init"
+    default = "il-db-init"
 }
-
+variable "enginedb" {
+    description = "The type of db instance"
+    type = string
+    default = "postgres"
+}   
 variable "db_name" {
   description = "The default name of db instance"
   type = string
@@ -88,8 +104,65 @@ variable "availability_zone" {
     default = "ap-northeast-1a"
 }
 
+variable "skip_final_snapshot" {
+  type        = bool
+  default     = true
+  description = "RDS skip final snapshot. (for production change to false, for dev change to true for quickly delete the infra)"
+}
+
 variable "publicly_accessible" {
   description = "Enable for public access or not"
   type = bool
   default = false
+}
+
+variable "parameter_group_family" {
+    description = "The family of the instance db"
+    type = string
+    default = "postgres13"
+}
+
+variable "parameter_group_name_description" {
+    description = "The default parameter group for rds instance"
+    type = string
+    default = "The default parameter group for rds instance"
+}
+
+variable "multi_az" {
+    description = "Multi az deployment for rds instance"
+    type = bool
+    default = false
+}
+
+variable "apply_immediately" {
+  type        = bool
+  default     = true
+  description = "Apply changes immediately."
+}
+
+variable "monitoring_interval" {
+  type        = number
+  default     = 60
+  description = "Monitoring interval."
+}
+
+#condition running variable
+variable "enable_ec2_module" {
+    type = bool
+    default = false
+}
+
+variable "enable_s3_module" {
+    type  = bool
+    default = true
+}
+
+variable "enable_ecr_module" {
+    type  = bool
+    default = true
+}
+
+variable "enable_postgresql_module" {
+    type = bool
+    default = true
 }
