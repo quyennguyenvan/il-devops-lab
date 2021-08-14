@@ -1,5 +1,5 @@
 output "rds_postgres_endpoint" {
-  value       = toset(
+  value = toset(
       [
           for endpoint in module.postgresql_db : endpoint.rds_postgres_endpoint
       ]
@@ -8,17 +8,29 @@ output "rds_postgres_endpoint" {
 }
 
 output "rds_postgres_username" {
-  value       = module.postgresql_db[0].rds_postgres_username
+  value = toset(
+      [
+          for username in module.postgresql_db : username.rds_postgres_username
+      ]
+  )
   description = "RDS username."
 }
 
 output "rds_postgres_password" {
-  value       = module.postgresql_db[0].rds_postgres_password
+  value = toset(
+      [
+          for pwd in module.postgresql_db : pwd.rds_postgres_password
+      ]
+  )
   sensitive   = true
   description = "RDS password."
 }
 
 output "ecr_arn" {
-    value = module.ecr_module[0].ecr_arn
+    value = toset(
+      [
+          for ecr in module.ecr_module : ecr.ecr_arn
+      ]
+    )
     description = "The arn of ecr"
 }
