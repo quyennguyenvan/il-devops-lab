@@ -6,14 +6,9 @@ pipeline {
     region = "ap-northeast-1"
   }
 
-  stages {
-    stage("publish") {
-      agent { node {label 'master'}}
-       node('s3node'){
-        withAWS(region:region,credentials:'aws-credential',useNode: true) {
-          s3Upload(file:'index.html', bucket:S3BUCKET, path:'index.html')
-        }
-      }
+  node('s3node'){
+    withAWS(region:region,credentials:'aws-credential',useNode: true) {
+      s3Upload(file:'index.html', bucket:S3BUCKET, path:'index.html')
     }
   }
 
