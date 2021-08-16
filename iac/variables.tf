@@ -17,9 +17,9 @@ variable "aws-linux2" {
     default = "ami-0b276ad63ba2d6009"
 }
 variable "instancesize" {
-    default = "t2.small"
+    default = "t2.medium"
 }
-variable "currentIPACCESS"{
+variable "sshIPADMINALLOW"{
     default = "183.81.127.210/32"
 }
 
@@ -149,7 +149,7 @@ variable "monitoring_interval" {
 #condition running variable
 variable "enable_ec2_module" {
     type = bool
-    default = false
+    default = true
 }
 
 variable "enable_s3_module" {

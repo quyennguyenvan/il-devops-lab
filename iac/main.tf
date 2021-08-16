@@ -67,70 +67,39 @@ resource "aws_kms_grant" "kms_grant_permission" {
   operations = [ "Encrypt", "Decrypt"]
 }
 
-#create the vpc
-resource aws_vpc "il_vpc_main"{
-    cidr_block = var.vpc_cidr
-    tags = var.tags
-}
-#setup IGW
-resource "aws_internet_gateway" "igw_il_vpc_main_main" {
-    vpc_id = aws_vpc.il_vpc_main.id
-    tags = var.tags
-}
-#create the subnet
-resource "aws_subnet" "sn_app_ec_instance" {
-    vpc_id = aws_vpc.il_vpc_main.id
-    cidr_block = var.azonea_instance_cidr
-    availability_zone = var.azonea
-    assign_ipv6_address_on_creation = false
-    map_public_ip_on_launch = true
-    tags = var.tags
-}
-resource "aws_subnet" "sn_app_db_zonea" {
-  vpc_id = aws_vpc.il_vpc_main.id
-  cidr_block = var.azonea_db_cidr
-  availability_zone = var.azonea
+#load the module vpc
+module "vpc" {
+  source = "./modules/vpc"
+  vpc_cidr = var.vpc_cidr
+  azonea = var.azonea
+  azonec = var.azonec
+  azonea_db_cidr = var.azonea_db_cidr
+  azonec_db_cidr = var.azonec_db_cidr
+  azonea_instance_cidr = var.azonea_instance_cidr
+  azonec_instance_cidr = var.azonec_instance_cidr
   tags = var.tags
-}
-resource "aws_subnet" "sn_app_db_zonec" {
-  vpc_id = aws_vpc.il_vpc_main.id
-  cidr_block = var.azonec_db_cidr
-  availability_zone = var.azonec
-  tags = var.tags
-}
-resource "aws_db_subnet_group" "db_sng_rds" {
-    name = "default_db_subnet_rds"
-    subnet_ids = [ aws_subnet.sn_app_db_zonea.id,aws_subnet.sn_app_db_zonec.id ]
-    tags = var.tags
-}
-#set route table
-resource "aws_default_route_table" "rtb_vpc_il_vpc_main_main" {
-    default_route_table_id = aws_vpc.il_vpc_main.default_route_table_id
-    tags = var.tags
-    route {
-        cidr_block = "0.0.0.0/0"
-        gateway_id = aws_internet_gateway.igw_il_vpc_main_main.id
-    }
-}
-resource "aws_route_table_association" "rtb_main_association_subnet" {
-    subnet_id = aws_subnet.sn_app_ec_instance.id
-    route_table_id = aws_default_route_table.rtb_vpc_il_vpc_main_main.id
+  cidr_allow = var.vpc_cidr
 }
 
 #load the module for ec2 <basiton vm to test>
 module "ec2_instance" {
-    count = var.enable_ec2_module ? 1 : 0
-    
-    source = "./modules/ec2instance"
-    vpc_id = aws_vpc.il_vpc_main.id
-    instanceami = var.aws-linux2
-    instancesize = var.instancesize
-    sn_instance_id = aws_subnet.sn_app_ec_instance.id
-    tags = merge(var.tags,
-      {
-        name = "EC2 Instance Jumper"
-      }
-    )
+  depends_on = [
+    module.vpc
+  ]
+  count = var.enable_ec2_module ? 1 : 0
+  
+  source = "./modules/ec2instance"
+  vpc_id =  module.vpc.vpc_id
+  instanceami = var.aws-linux2
+  instancesize = var.instancesize
+  sn_instance_id = module.vpc.sn_app_zone_a_ec_instance
+  allow_IP = var.sshIPADMINALLOW
+  cidr_allow = var.vpc_cidr
+  tags = merge(var.tags,
+    {
+      name = "EC2 Instance"
+    }
+  )
 }
 #load the S3 static web
 module "s3_storage_static_web"{
@@ -151,34 +120,36 @@ module "ecr_module"{
 
 #load the module postgres
 module "postgresql_db" {
-    count = var.enable_postgresql_module ? 1 : 0
-    source = "./modules/postgresql"
-    vpc_id = aws_vpc.il_vpc_main.id
-    cidr_allow = var.vpc_cidr
-    parameter_group_family = var.parameter_group_family
-    parameter_group_name_description = var.parameter_group_name_description
-    identifier_db = var.identifier_db
-    db_name = var.db_name
-    username = var.username
-    rd_pwd_postgre = random_password.rd_pwd_postgre
-    db_port = var.db_port
-    enginedb = var.enginedb
-    engine_version = var.engine_version
-    instance_class = var.instance_class
-    storage_type = var.storage_type
-    multi_az = var.multi_az
-    allocated_storage = var.allocated_storage
-    max_allocated_storage = var.max_allocated_storage
-    availability_zone = var.availability_zone
-    publicly_accessible = var.publicly_accessible
-    db_subnet_group_name = aws_db_subnet_group.db_sng_rds.name
-    skip_final_snapshot = var.skip_final_snapshot
-    backup_retention_period = 7
-    apply_immediately = var.apply_immediately
-    monitoring_interval = var.monitoring_interval
-    iam_monitoring_interval_rds_arn = aws_iam_role.iam_monitoring_interval_rds.arn
-    storage_credential_to_ssm  = true
-    tags = var.tags
-
+  depends_on = [
+    module.vpc
+  ]
+  count = var.enable_postgresql_module ? 1 : 0
+  source = "./modules/postgresql"
+  vpc_id = aws_vpc.il_vpc_main.id
+  cidr_allow = var.vpc_cidr
+  parameter_group_family = var.parameter_group_family
+  parameter_group_name_description = var.parameter_group_name_description
+  identifier_db = var.identifier_db
+  db_name = var.db_name
+  username = var.username
+  rd_pwd_postgre = random_password.rd_pwd_postgre
+  db_port = var.db_port
+  enginedb = var.enginedb
+  engine_version = var.engine_version
+  instance_class = var.instance_class
+  storage_type = var.storage_type
+  multi_az = var.multi_az
+  allocated_storage = var.allocated_storage
+  max_allocated_storage = var.max_allocated_storage
+  availability_zone = var.availability_zone
+  publicly_accessible = var.publicly_accessible
+  db_subnet_group_name = aws_db_subnet_group.db_sng_rds.name
+  skip_final_snapshot = var.skip_final_snapshot
+  backup_retention_period = 7
+  apply_immediately = var.apply_immediately
+  monitoring_interval = var.monitoring_interval
+  iam_monitoring_interval_rds_arn = aws_iam_role.iam_monitoring_interval_rds.arn
+  storage_credential_to_ssm  = true
+  tags = var.tags
 }
 
