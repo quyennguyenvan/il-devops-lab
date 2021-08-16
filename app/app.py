@@ -28,7 +28,7 @@ def getDBCredential():
         "username": dbInfo[3]['Value'],
         "password": dbInfo[2]['Value']
     }
-    return json.dumps("DB Info: {0}\n DB Connection info: {1}".format(dbContext.getDBInfor(),dbInfo))
+    return json.dumps("DB Info: {0}. DB Connection info: {1}".format(dbContext.getDBInfor(),dbInfo))
 
 if __name__ == '__main__':
     #load the config
