@@ -17,6 +17,7 @@ pipeline {
         sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
         sh "docker image ls | grep ${DOCKER_IMAGE}"
         sh "echo running the docker image"
+        sh "docker rm app-test"
         sh "docker run -d --name app-test -p 5000:5000 ${DOCKER_IMAGE}:${DOCKER_TAG}"
         withDockerRegistry([url: "https://"+DOCKER_IMAGE,credentialsId:'aws-credential']) {
             sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
