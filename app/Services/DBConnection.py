@@ -7,7 +7,7 @@ class DBContext(object):
         self.connectionDBCredential = connectionDBCredential
 
     #init the connection
-    def connection(self):
+    def getDBInfor(self):
         try:
             con = psycopg2.connect(
                     host=self.connectionDBCredential['hostname'], 
@@ -15,16 +15,9 @@ class DBContext(object):
                     user=self.connectionDBCredential['username'],
                     password=self.connectionDBCredential['password'])
             cur = con.cursor()
-            return cur
-        except Exception as e:
-            print('Unable to connect. Detail: {0}'.format(e))
-
-    def getDBInfor(self):
-        try:
-            if self.connection():
-                cur = self.connection()
-                cur.execute("SELECT version()")
-                version = cur.fetchone()
-                return version
+            cur.execute("SELECT version()")
+            version = cur.fetchone()
+            return version
         except Exception as er:
-            return er
+            print('Unable to connect. Detail: {0}'.format(er))
+            return "Current cur not open. please check the network of credential of connection"
