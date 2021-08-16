@@ -4,5 +4,6 @@ RUN apt-get update \
 WORKDIR /app
 COPY requirement.txt requirement.txt
 RUN pip3 install -r requirement.txt
-COPY . .
-CMD ["python3", "main.py"]
+COPY . /app
+ENTRYPOINT [ "python3" ]
+CMD [ "app.py" ]

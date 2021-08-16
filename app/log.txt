@@ -1,0 +1,338 @@
+2021-08-15 21:47:20,994 1360 INFO __main__ Logger init ... OK
+2021-08-15 21:47:31,588 22064 INFO __main__ Logger init ... OK
+2021-08-15 21:47:44,523 296 INFO __main__ Logger init ... OK
+2021-08-15 21:47:56,313 7416 INFO __main__ Logger init ... OK
+2021-08-15 21:48:09,626 13812 INFO __main__ Logger init ... OK
+2021-08-15 21:48:09,636 13812 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 21:51:01,102 2560 INFO __main__ Logger init ... OK
+2021-08-15 21:51:01,113 2560 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 21:51:53,016 7732 INFO __main__ Logger init ... OK
+2021-08-15 21:51:53,028 7732 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 21:51:57,327 10520 INFO __main__ Logger init ... OK
+2021-08-15 21:51:57,337 10520 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 21:52:06,328 21064 INFO __main__ Logger init ... OK
+2021-08-15 21:52:06,339 21064 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 21:53:13,907 18124 INFO __main__ Logger init ... OK
+2021-08-15 21:53:13,917 18124 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:25:12,389 16264 INFO __main__ Logger init ... OK
+2021-08-15 23:25:12,427 16264 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:25:39,013 14764 INFO __main__ Logger init ... OK
+2021-08-15 23:25:39,025 14764 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:25:55,361 26656 INFO __main__ Logger init ... OK
+2021-08-15 23:25:55,380 26656 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:28:06,792 18268 INFO __main__ Logger init ... OK
+2021-08-15 23:28:06,806 18268 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:28:15,135 25220 INFO __main__ Logger init ... OK
+2021-08-15 23:28:15,148 25220 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:29:13,553 17396 INFO __main__ Logger init ... OK
+2021-08-15 23:29:13,564 17396 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:29:24,327 14928 INFO __main__ Logger init ... OK
+2021-08-15 23:29:24,339 14928 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:29:34,030 15568 INFO __main__ Logger init ... OK
+2021-08-15 23:29:34,042 15568 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:30:29,644 19828 INFO __main__ Logger init ... OK
+2021-08-15 23:30:29,656 19828 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:42:35,691 7772 INFO __main__ Logger init ... OK
+2021-08-15 23:42:47,138 16224 INFO __main__ Logger init ... OK
+2021-08-15 23:42:47,154 16224 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:42:47,898 16224 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-15 23:42:47,898 16224 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-15 23:43:00,386 16224 ERROR main Exception on /v1/info [GET]
+Traceback (most recent call last):
+  File "C:\Users\quyen\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\quyen\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\quyen\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1535, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\quyen\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1690, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response tuple. The tuple must have the form (body, status, headers), (body, status), or (body, headers).
+2021-08-15 23:43:00,398 16224 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:00] "[35m[1mGET /v1/info HTTP/1.1[0m" 500 -
+2021-08-15 23:43:00,710 16224 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-08-15 23:43:19,066 23876 INFO __main__ Logger init ... OK
+2021-08-15 23:43:19,087 23876 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:43:19,905 23876 INFO werkzeug  * Restarting with stat
+2021-08-15 23:43:20,410 26440 INFO __main__ Logger init ... OK
+2021-08-15 23:43:20,424 26440 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:43:21,134 26440 WARNING werkzeug  * Debugger is active!
+2021-08-15 23:43:21,142 26440 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-15 23:43:21,199 26440 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-15 23:43:21,199 26440 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-15 23:43:25,830 26440 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:25] "[35m[1mGET /v1/info HTTP/1.1[0m" 500 -
+2021-08-15 23:43:26,376 26440 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:26] "GET /v1/info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2021-08-15 23:43:26,454 26440 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:26] "GET /v1/info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2021-08-15 23:43:26,770 26440 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:26] "GET /v1/info?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2021-08-15 23:43:26,876 26440 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:26] "GET /v1/info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-08-15 23:43:27,037 26440 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:27] "GET /v1/info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-08-15 23:43:51,194 26440 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\main.py', reloading
+2021-08-15 23:43:51,271 23876 INFO werkzeug  * Restarting with stat
+2021-08-15 23:43:51,785 23624 INFO __main__ Logger init ... OK
+2021-08-15 23:43:51,800 23624 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:43:52,505 23624 WARNING werkzeug  * Debugger is active!
+2021-08-15 23:43:52,514 23624 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-15 23:43:52,576 23624 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-15 23:43:52,577 23624 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-15 23:43:54,772 21032 INFO __main__ Logger init ... OK
+2021-08-15 23:43:54,787 21032 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:43:55,539 21032 INFO werkzeug  * Restarting with stat
+2021-08-15 23:43:56,204 25852 INFO __main__ Logger init ... OK
+2021-08-15 23:43:56,220 25852 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:43:56,940 25852 WARNING werkzeug  * Debugger is active!
+2021-08-15 23:43:56,949 25852 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-15 23:43:57,003 25852 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-15 23:43:57,004 25852 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-15 23:43:57,315 25852 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:57] "[35m[1mGET /v1/info HTTP/1.1[0m" 500 -
+2021-08-15 23:43:58,001 25852 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:58] "GET /v1/info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2021-08-15 23:43:58,002 25852 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:58] "GET /v1/info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2021-08-15 23:43:58,010 25852 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:58] "GET /v1/info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-08-15 23:43:58,387 25852 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:58] "GET /v1/info?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2021-08-15 23:43:58,655 25852 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:43:58] "GET /v1/info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-08-15 23:44:12,020 25852 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\main.py', reloading
+2021-08-15 23:44:12,084 21032 INFO werkzeug  * Restarting with stat
+2021-08-15 23:44:12,606 2516 INFO __main__ Logger init ... OK
+2021-08-15 23:44:12,622 2516 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:44:13,203 2516 WARNING werkzeug  * Debugger is active!
+2021-08-15 23:44:13,209 2516 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-15 23:44:13,271 2516 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-15 23:44:13,271 2516 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-15 23:44:17,371 28152 INFO __main__ Logger init ... OK
+2021-08-15 23:44:17,384 28152 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:44:18,057 28152 INFO werkzeug  * Restarting with stat
+2021-08-15 23:44:18,589 16688 INFO __main__ Logger init ... OK
+2021-08-15 23:44:18,603 16688 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-15 23:44:19,236 16688 WARNING werkzeug  * Debugger is active!
+2021-08-15 23:44:19,243 16688 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-15 23:44:19,299 16688 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-15 23:44:19,299 16688 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-15 23:44:20,449 16688 INFO werkzeug 127.0.0.1 - - [15/Aug/2021 23:44:20] "GET /v1/info HTTP/1.1" 200 -
+2021-08-15 23:44:32,199 16688 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\main.py', reloading
+2021-08-15 23:44:32,262 28152 INFO werkzeug  * Restarting with stat
+2021-08-15 23:44:32,786 9276 INFO __main__ Logger init ... OK
+2021-08-15 23:44:32,802 9276 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-16 00:30:50,042 30704 INFO __main__ Logger init ... OK
+2021-08-16 00:30:50,057 30704 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-16 00:30:50,824 30704 INFO werkzeug  * Restarting with stat
+2021-08-16 00:30:51,350 30488 INFO __main__ Logger init ... OK
+2021-08-16 00:30:51,381 30488 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-16 00:30:51,969 30488 WARNING werkzeug  * Debugger is active!
+2021-08-16 00:30:51,975 30488 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 00:30:52,029 30488 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 00:30:52,029 30488 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 00:30:54,576 30488 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 00:30:54] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 00:31:57,993 30488 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\Services\\DBConnection.py', reloading
+2021-08-16 00:31:58,053 30704 INFO werkzeug  * Restarting with stat
+2021-08-16 00:31:58,569 29180 INFO __main__ Logger init ... OK
+2021-08-16 00:31:58,582 29180 INFO botocore.credentials Found credentials in shared credentials file: ~/.aws/credentials
+2021-08-16 00:31:59,275 29180 WARNING werkzeug  * Debugger is active!
+2021-08-16 00:31:59,281 29180 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 00:31:59,339 29180 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 00:31:59,339 29180 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 01:17:57,764 24012 INFO __main__ Logger init ... OK
+2021-08-16 01:17:57,778 24012 INFO werkzeug  * Restarting with stat
+2021-08-16 01:17:58,184 28792 INFO __main__ Logger init ... OK
+2021-08-16 01:17:58,192 28792 WARNING werkzeug  * Debugger is active!
+2021-08-16 01:17:58,197 28792 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 01:17:58,253 28792 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 01:17:58,254 28792 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 01:18:00,634 28792 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 01:18:00] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 01:18:00,959 28792 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 01:18:00] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 01:18:14,145 28792 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 01:18:14,199 24012 INFO werkzeug  * Restarting with stat
+2021-08-16 01:18:14,644 26592 INFO __main__ Logger init ... OK
+2021-08-16 01:18:14,652 26592 WARNING werkzeug  * Debugger is active!
+2021-08-16 01:18:14,657 26592 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 01:18:14,711 26592 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 01:18:14,711 26592 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 01:18:16,057 26124 INFO __main__ Logger init ... OK
+2021-08-16 01:18:16,074 26124 INFO werkzeug  * Restarting with stat
+2021-08-16 01:18:16,536 22460 INFO __main__ Logger init ... OK
+2021-08-16 01:18:16,544 22460 WARNING werkzeug  * Debugger is active!
+2021-08-16 01:18:16,549 22460 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 01:18:16,604 22460 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 01:18:16,605 22460 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 01:18:17,626 22460 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 01:18:17] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 01:18:18,427 22460 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 01:18:18] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 01:18:21,896 22460 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 01:18:21,938 26124 INFO werkzeug  * Restarting with stat
+2021-08-16 01:18:22,351 26672 INFO __main__ Logger init ... OK
+2021-08-16 01:18:22,361 26672 WARNING werkzeug  * Debugger is active!
+2021-08-16 01:18:22,367 26672 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 01:18:22,421 26672 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 01:18:22,421 26672 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 01:18:33,227 26672 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 01:18:33] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 01:18:35,752 26672 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 01:18:35] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 01:18:40,412 26672 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 01:18:40,455 26124 INFO werkzeug  * Restarting with stat
+2021-08-16 01:18:40,851 27952 INFO __main__ Logger init ... OK
+2021-08-16 01:18:40,859 27952 WARNING werkzeug  * Debugger is active!
+2021-08-16 01:18:40,864 27952 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 01:18:40,923 27952 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 01:18:40,923 27952 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 01:18:43,682 27952 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 01:18:43] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 01:18:44,121 27952 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 01:18:44] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 01:19:45,332 27952 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 01:19:45,381 26124 INFO werkzeug  * Restarting with stat
+2021-08-16 01:19:45,789 28508 INFO __main__ Logger init ... OK
+2021-08-16 01:19:45,796 28508 WARNING werkzeug  * Debugger is active!
+2021-08-16 01:19:45,802 28508 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 01:19:45,857 28508 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 01:19:45,857 28508 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 01:20:15,652 28064 INFO __main__ Logger init ... OK
+2021-08-16 01:20:15,666 28064 INFO werkzeug  * Restarting with stat
+2021-08-16 01:20:16,064 26192 INFO __main__ Logger init ... OK
+2021-08-16 01:20:16,071 26192 WARNING werkzeug  * Debugger is active!
+2021-08-16 01:20:16,076 26192 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 01:20:16,129 26192 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 01:20:16,129 26192 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 01:21:23,562 29468 INFO __main__ Logger init ... OK
+2021-08-16 01:21:23,576 29468 INFO werkzeug  * Restarting with stat
+2021-08-16 01:21:23,961 15376 INFO __main__ Logger init ... OK
+2021-08-16 01:21:23,968 15376 WARNING werkzeug  * Debugger is active!
+2021-08-16 01:21:23,973 15376 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 01:21:24,025 15376 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 01:21:24,025 15376 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 01:30:38,974 25136 INFO __main__ Logger init ... OK
+2021-08-16 01:30:38,988 25136 INFO werkzeug  * Restarting with stat
+2021-08-16 01:30:39,421 22932 INFO __main__ Logger init ... OK
+2021-08-16 01:30:39,429 22932 WARNING werkzeug  * Debugger is active!
+2021-08-16 01:30:39,434 22932 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 01:30:39,489 22932 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 01:30:39,489 22932 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 01:30:50,960 22932 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 01:30:50] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 01:30:51,219 22932 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 01:30:51] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 11:18:29,354 16820 INFO __main__ Logger init ... OK
+2021-08-16 11:18:29,442 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:18:29,903 28188 INFO __main__ Logger init ... OK
+2021-08-16 11:18:29,911 28188 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:18:29,919 28188 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:18:29,971 28188 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:18:29,971 28188 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:18:43,002 28188 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 11:18:43] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 11:18:43,311 28188 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 11:18:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-08-16 11:19:00,434 28188 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:19:00,563 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:19:01,071 10128 INFO __main__ Logger init ... OK
+2021-08-16 11:19:01,081 10128 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:19:01,088 10128 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:19:01,141 10128 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:19:01,141 10128 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:19:08,954 10128 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 11:19:08] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 11:19:19,010 10128 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:19:19,059 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:19:19,523 16116 INFO __main__ Logger init ... OK
+2021-08-16 11:19:19,535 16116 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:19:19,541 16116 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:19:19,599 16116 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:19:19,600 16116 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:19:35,370 16116 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:19:35,417 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:19:35,883 21468 INFO __main__ Logger init ... OK
+2021-08-16 11:19:35,892 21468 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:19:35,899 21468 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:19:35,950 21468 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:19:35,951 21468 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:19:39,137 21468 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:19:39,180 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:19:39,623 27912 INFO __main__ Logger init ... OK
+2021-08-16 11:19:39,632 27912 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:19:39,638 27912 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:19:39,690 27912 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:19:39,690 27912 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:19:46,040 27912 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:19:46,085 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:19:46,560 24244 INFO __main__ Logger init ... OK
+2021-08-16 11:19:46,569 24244 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:19:46,577 24244 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:19:46,633 24244 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:19:46,633 24244 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:19:56,097 24244 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:19:56,140 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:19:56,589 17616 INFO __main__ Logger init ... OK
+2021-08-16 11:19:56,598 17616 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:19:56,604 17616 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:19:56,657 17616 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:19:56,657 17616 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:20:06,122 17616 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:20:06,160 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:20:06,838 22992 INFO __main__ Logger init ... OK
+2021-08-16 11:20:06,849 22992 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:20:06,855 22992 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:20:06,918 22992 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:20:06,918 22992 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:20:21,677 22992 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:20:21,719 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:20:22,183 13404 INFO __main__ Logger init ... OK
+2021-08-16 11:20:22,191 13404 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:20:22,197 13404 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:20:22,251 13404 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:20:22,251 13404 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:20:31,740 13404 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:20:31,780 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:20:32,254 5236 INFO __main__ Logger init ... OK
+2021-08-16 11:20:32,263 5236 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:20:32,269 5236 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:20:32,321 5236 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:20:32,321 5236 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:21:31,213 5236 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:21:31,254 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:21:31,690 22684 INFO __main__ Logger init ... OK
+2021-08-16 11:21:31,699 22684 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:21:31,706 22684 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:21:31,756 22684 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:21:31,756 22684 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:21:35,979 22684 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:21:36,023 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:21:36,468 28116 INFO __main__ Logger init ... OK
+2021-08-16 11:21:36,476 28116 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:21:36,482 28116 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:21:36,534 28116 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:21:36,534 28116 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:21:42,878 28116 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:21:42,924 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:21:43,376 25312 INFO __main__ Logger init ... OK
+2021-08-16 11:21:43,384 25312 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:21:43,390 25312 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:21:43,442 25312 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:21:43,442 25312 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:23:09,982 25312 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 11:23:09] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 11:23:32,927 25312 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:23:32,977 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 11:23:33,415 26952 INFO __main__ Logger init ... OK
+2021-08-16 11:23:33,423 26952 WARNING werkzeug  * Debugger is active!
+2021-08-16 11:23:33,429 26952 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 11:23:33,480 26952 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 11:23:33,480 26952 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 11:23:49,327 26952 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 11:23:49,374 16820 INFO werkzeug  * Restarting with stat
