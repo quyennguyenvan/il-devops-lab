@@ -11,6 +11,7 @@ pipeline {
     stage("publish") {
       agent { node {label 'master'}}
       steps {
+        sh "ls -ll"
         pwd();
         withAWS(region:region,credentials:'aws-credential') {
             def identity=awsIdentity();//Log AWS credentials
