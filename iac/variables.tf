@@ -46,7 +46,11 @@ variable "azonec_db_cidr"{
 }
 
 variable "aws_key_pair_public" {
-  default = ""
+  default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCfXoiN/ta7XRYH86aQIlL1Qgga0J4JDAu+zeYv08rqCopqq1Rl/oy3FJ50Wx4DJkK0MtPZ09+RxbxhMGPpnJPYMsg8w4FPopbmBvRAb8NlyPEYRP0zb+DxHqDrki8ZaGuylAXt/w5E4fJ22CC96UoQDElKi04/Nc2T1MooM1+fA/SwY9FJn+g9iqQpjNnWOiW8HtSALFwLKn9TJ5BnjMeVrdPi+8TWsX/zWmjpyaONzu3dxLN8nVqG6A6OVrcLp8RVcxMZScpE439f8DU2gjOlpvKgiDgf7BkopcQYtY9xFeJQVRwx5BkgyB10zoAohz3TmA7tjC5ozNaGA08POqe/ rsa-key-20210816"
+}
+
+variable "public_key_passphrase" {
+  default = "123@abc"
 }
 
 #for rds postgresql config
