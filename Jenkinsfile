@@ -11,10 +11,10 @@ pipeline {
     stage("publish") {
       agent { node {label 'master'}}
       steps {
-        pwd(); //Log current directory
+        pwd();
         withAWS(region:region,credentials:'aws-credential') {
             def identity=awsIdentity();//Log AWS credentials
-            s3Upload(bucket:S3BUCKET, workingDir:'./', includePathPattern:'**/*');
+            s3Upload(entries:S3BUCKET, workingDir:'.', includePathPattern:'**/*');
         }
       }
     }
