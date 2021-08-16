@@ -1,5 +1,4 @@
 pipeline {
-
   agent none
 
   environment {
@@ -14,8 +13,7 @@ pipeline {
         sh "ls -ll"
         pwd();
         withAWS(region:region,credentials:'aws-credential') {
-            def identity=awsIdentity();//Log AWS credentials
-            s3Upload(entries:S3BUCKET, workingDir:'.', includePathPattern:'**/*');
+            s3Upload(file:'index.html',bucket:S3BUCKET, includePathPattern:'**/*');
         }
       }
     }
