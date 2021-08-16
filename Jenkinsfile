@@ -3,8 +3,8 @@ pipeline {
   agent none
 
   environment {
-    registry = "482976502347.dkr.ecr.ap-northeast-1.amazonaws.com/il_py_app"
-    registryCredential = "aws-jenkins-intergration-access-key"
+    DOCKER_IMAGE = "482976502347.dkr.ecr.ap-northeast-1.amazonaws.com/il_py_app"
+    credentialsId = "aws-jenkins-intergration-access-key"
   }
 
   stages {
@@ -17,7 +17,8 @@ pipeline {
         sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
         sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
         sh "docker image ls | grep ${DOCKER_IMAGE}"
-        docker.withRegistry("https://" + image_registry, "ecr:ap-northeast-1:" + registryCredential) {
+        withDockerRegistry([url: "https://"+DOCKER_IMAGE,credentialsId:credentialsId]) {
+            sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
             sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
             sh "docker push ${DOCKER_IMAGE}:latest"
         }

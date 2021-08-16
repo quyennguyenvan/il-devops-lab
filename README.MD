@@ -16,3 +16,9 @@
 
 ```terraform destroy --auto-approve```
 
+***for the ec2 instance connection***
+```I create 2 method to connection to the instance
+1. Using IAM role attachment
+2. Using key pair
+```
+
