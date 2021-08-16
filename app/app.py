@@ -23,10 +23,11 @@ def getDBCredential():
     dbInfo = ssmService.GetDBParameters()
 
     dbContext = DBContextService.dbContextService()
-    host = dbInfo[0]['Value'].split(':')[0]
-    dbName = dbInfo[1]['Value']
-    password = dbInfo[2]['Value']
-    username = dbInfo[3]['Value']
+    dbName = dbInfo[0]['Value']
+    host = dbInfo[1]['Value'].split(':')[0]
+    dbIndentifier = dbInfo[2]['Value']
+    password = dbInfo[3]['Value']
+    username = dbInfo[4]['Value']
     dbContext.connectionDBCredential = {
         "hostname": host,
         "identifier": dbName,

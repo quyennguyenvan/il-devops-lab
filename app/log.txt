@@ -553,3 +553,11 @@ TypeError: The view function did not return a valid response tuple. The tuple mu
 2021-08-16 19:08:06,105 34608 WARNING werkzeug  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 2021-08-16 19:08:06,105 34608 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:39:49,562 30964 INFO __main__ Logger init ... OK
+2021-08-16 19:39:49,576 30964 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:39:49,576 30964 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:39:57,185 30964 INFO root db issue: could not translate host name "ildb" to address: Unknown host
+
+2021-08-16 19:39:57,191 30964 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 19:39:57] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 19:39:57,452 30964 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 19:39:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
