@@ -13,7 +13,7 @@ pipeline {
         sh "ls -ll"
         pwd();
         withAWS(region:region,credentials:'aws-credential') {
-            s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'iindex.html', bucket:S3BUCKET, path:'index.html')
+          s3Upload(file:'index.html', bucket:S3BUCKET, path:'index.html')
         }
       }
     }
