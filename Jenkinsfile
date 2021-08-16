@@ -12,8 +12,7 @@ pipeline {
       steps {
         pwd();
         withAWS(region:region,credentials:'aws-credential') {
-          def identity = awsIdentity()
-          s3Upload(file:'index.html', bucket:S3BUCKET, path: 'index.html')
+          s3Upload(pathStyleAccessEnabled: true,file:'index.html', bucket:S3BUCKET, path: 'index.html',acl:'PublicRead')
         }
       }
     }
