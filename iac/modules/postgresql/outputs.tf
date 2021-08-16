@@ -13,6 +13,3 @@ output "rds_postgres_password" {
   sensitive   = true
   description = "RDS password."
 }
-output "rds_postgres_db_name" {
-  value = aws_db_instance.rds_postgre_db.identifier.db_name
-}
