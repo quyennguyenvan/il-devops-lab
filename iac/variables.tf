@@ -31,17 +31,23 @@ variable "azonec"{
     default = "ap-northeast-1c"
 }
 variable "vpc_cidr"{
-    default = "10.0.10.0/24"
+    default = "10.10.0.0/16"
 }
 variable "azonea_instance_cidr"{
-    default = "10.0.10.64/26"
+    default = "10.10.1.0/24"
 }
-
+variable "azonec_instance_cidr"{
+    default = "10.10.2.0/24"
+}
 variable "azonea_db_cidr"{
-    default = "10.0.10.160/27"
+    default = "10.10.3.0/24"
 }
 variable "azonec_db_cidr"{
-    default = "10.0.10.208/28"
+    default = "10.10.4.0/24"
+}
+
+variable "aws_key_pair_public" {
+  default = ""
 }
 
 #for rds postgresql config
