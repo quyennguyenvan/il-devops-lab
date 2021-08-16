@@ -20,13 +20,8 @@ pipeline {
         withDockerRegistry([url: "https://"+DOCKER_IMAGE,credentialsId:credentialsId]) {
             sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
             sh "docker push ${DOCKER_IMAGE}:latest"
-        } 
-      }
-      steps{
-        withDockerRegistry([url: "https://"+DOCKER_IMAGE,credentialsId:credentialsId]) {
-            sh "docker pull ${DOCKER_IMAGE}:${DOCKER_TAG}"
             sh "docker run -d --name app-test -p: 5000:5000 ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        }
+        } 
       }
     }
     stages{
