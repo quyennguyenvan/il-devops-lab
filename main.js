@@ -12,7 +12,9 @@ jQuery(document).ready(function($) {
             type: "GET",
             url: server,
             success:function(data){
-                $("#content").append(data);
+                console.log(data)
+                let text = 'data backend response:' + data['data']
+                $("#resources").append(text);
             },
             error: function(jqXHR, textStatus, err){
                 alert(jqXHR.status)
