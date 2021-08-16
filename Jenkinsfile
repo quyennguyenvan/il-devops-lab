@@ -19,7 +19,7 @@ pipeline {
         sh "echo remove the older docker container"
         sh "docker stop app-test && docker rm app-test"
         sh "docker run -d --name app-test -p 5000:5000 ${DOCKER_IMAGE}:${DOCKER_TAG}"
-        withDockerRegistry("https://"+DOCKER_IMAGE,'ecr:ap-northeast-1:aws-credential') {
+        withDockerRegistry([url:"https://"+DOCKER_IMAGE,credentialsId:'ecr:ap-northeast-1:aws-credential']) {
             sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
             sh "docker push ${DOCKER_IMAGE}:latest"
         } 

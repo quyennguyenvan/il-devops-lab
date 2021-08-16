@@ -25,12 +25,10 @@ module "vpc" {
 }
 
 #load the module for ec2 <basiton vm to test>
-module "ec2_instance" {
+module "ec2" {
   depends_on = [
     module.vpc
   ]
-  count = var.enable_ec2_module ? 1 : 0
-  
   source = "./modules/ec2instance"
   vpc_id =  module.vpc.vpc_id
   instanceami = var.aws-linux2
@@ -46,9 +44,7 @@ module "ec2_instance" {
   )
 }
 #load the S3 static web
-module "s3_storage_static_web"{
-  count = var.enable_s3_module ? 1 : 0
-
+module "s3"{
   source = "./modules/s3"
   block_public_acls = false
   block_public_policy = false
@@ -56,9 +52,7 @@ module "s3_storage_static_web"{
 }
 
 #load the module ecr
-module "ecr_module"{
-  count = var.enable_ecr_module ? 1 : 0
-
+module "ecr"{
   source = "./modules/ecr"
 }
 
@@ -67,7 +61,6 @@ module "postgresql_db" {
   depends_on = [
     module.vpc
   ]
-  count = var.enable_postgresql_module ? 1 : 0
   source = "./modules/postgresql"
   vpc_id = module.vpc.vpc_id
   cidr_allow = var.vpc_cidr
