@@ -3,26 +3,13 @@ pipeline {
   agent none
 
   environment {
-    DOCKER_IMAGE = "482976502347.dkr.ecr.ap-northeast-1.amazonaws.com/il_py_app"
+    registry = "482976502347.dkr.ecr.ap-northeast-1.amazonaws.com/il_py_app"
+    registryCredential = "aws-jenkins-intergration-access-key"
   }
 
   stages {
-    stage("Test") {
-      agent {
-          docker {
-            image 'python:3.8-slim-buster'
-            args '-u 0:0 -v /tmp:/root/.cache'
-          }
-      }
-      steps {
-        sh "pip install poetry"
-        sh "poetry install"
-        sh "poetry run pytest"
-      }
-    }
-
-    stage("build") {
-      agent { node {label 'master'}}
+    stage("build_and_deployment") {
+      agent { node {label 'app-python'}}
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
       }
@@ -30,8 +17,7 @@ pipeline {
         sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} . "
         sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
         sh "docker image ls | grep ${DOCKER_IMAGE}"
-        withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-            sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
+        docker.withRegistry("https://" + image_registry, "ecr:ap-northeast-1:" + registryCredential) {
             sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
             sh "docker push ${DOCKER_IMAGE}:latest"
         }
