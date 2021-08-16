@@ -20,4 +20,4 @@ class DBContext(object):
             return version
         except Exception as er:
             print('Unable to connect. Detail: {0}'.format(er))
-            return "Current cur not open. please check the network of credential of connection"
+            return "Current cur not open. please check the network or credential of connection"
