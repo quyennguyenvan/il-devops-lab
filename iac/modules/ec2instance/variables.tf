@@ -12,7 +12,7 @@ variable "tags" {}
 variable "allow_IP" {
   
 }
-variable "cidr_allow" {
+variable "cird_allow" {
   
 }
 

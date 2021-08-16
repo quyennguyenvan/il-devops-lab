@@ -10,6 +10,6 @@ output "sn_app_zone_c_ec_instance" {
  value = aws_subnet.sn_app_zone_c_ec_instance.id 
 }
 
-output "sn_dbg" {
-  value = aws_db_subnet_group.db_sng_rds.id
+output "sn_dbg_name" {
+  value = aws_db_subnet_group.db_sng_rds.name
 }

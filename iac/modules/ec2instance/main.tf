@@ -9,6 +9,7 @@ resource "aws_security_group" "sg_ec2_instance" {
     name = "SG EC2 APP INSTANCE"
     description = "Facing the internet application"
     ingress =[{
+        description = "Allow ssh to admin only"
         from_port = 22
         to_port = 22
         protocol = "tcp"
@@ -19,15 +20,15 @@ resource "aws_security_group" "sg_ec2_instance" {
         self = null
     },
     {
+        description = "Expose the jenkins server"
         from_port = 8080
         to_port = 8080
         protocol = "tcp"
-        cidr_blocks = [var.cidr_allow]
+        cidr_blocks = [var.cird_allow]
         ipv6_cidr_blocks = null
         prefix_list_ids = null
         security_groups = null
         self = null
-        description = "Expose the jenkins server"
     },
     {
         from_port = 5000

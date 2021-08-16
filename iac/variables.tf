@@ -19,10 +19,9 @@ variable "aws-linux2" {
 variable "instancesize" {
     default = "t2.medium"
 }
-variable "sshIPADMINALLOW"{
+variable "SSH_IP_ADMIN_ALLOW"{
     default = "183.81.127.210/32"
 }
-
 
 variable "azonea"{
     default = "ap-northeast-1a"

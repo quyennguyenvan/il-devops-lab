@@ -3,11 +3,16 @@ resource "random_password" "rd_pwd_postgre" {
     length = 14
     special = false
 }
-
-
+module "iam" {
+  source = "./modules/iam"
+  tags = var.tags
+}
 
 #load the module vpc
 module "vpc" {
+  depends_on = [
+    module.iam
+  ]
   source = "./modules/vpc"
   vpc_cidr = var.vpc_cidr
   azonea = var.azonea
@@ -31,8 +36,8 @@ module "ec2_instance" {
   instanceami = var.aws-linux2
   instancesize = var.instancesize
   sn_instance_id = module.vpc.sn_app_zone_a_ec_instance
-  allow_IP = var.sshIPADMINALLOW
-  cidr_allow = var.vpc_cidr
+  allow_IP = var.SSH_IP_ADMIN_ALLOW
+  cird_allow = "0.0.0.0/0"
   aws_key_pair_public = var.aws_key_pair_public
   tags = merge(var.tags,
     {
@@ -64,7 +69,7 @@ module "postgresql_db" {
   ]
   count = var.enable_postgresql_module ? 1 : 0
   source = "./modules/postgresql"
-  vpc_id = aws_vpc.il_vpc_main.id
+  vpc_id = module.vpc.vpc_id
   cidr_allow = var.vpc_cidr
   parameter_group_family = var.parameter_group_family
   parameter_group_name_description = var.parameter_group_name_description
@@ -82,12 +87,12 @@ module "postgresql_db" {
   max_allocated_storage = var.max_allocated_storage
   availability_zone = var.availability_zone
   publicly_accessible = var.publicly_accessible
-  db_subnet_group_name = aws_db_subnet_group.db_sng_rds.name
+  db_subnet_group_name = module.vpc.sn_dbg_name
   skip_final_snapshot = var.skip_final_snapshot
   backup_retention_period = 7
   apply_immediately = var.apply_immediately
   monitoring_interval = var.monitoring_interval
-  iam_monitoring_interval_rds_arn = aws_iam_role.iam_monitoring_interval_rds.arn
+  iam_monitoring_interval_rds_arn = module.iam.monitoring_interval_rds
   storage_credential_to_ssm  = true
   tags = var.tags
 }
