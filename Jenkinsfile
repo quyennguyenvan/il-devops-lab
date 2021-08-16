@@ -24,12 +24,6 @@ pipeline {
         } 
       }
     }
-    stages{
-      stage("pull_and_deployment"){
-        agent {node {label 'master'}}
-
-      }
-    }
   }
 
   post {
