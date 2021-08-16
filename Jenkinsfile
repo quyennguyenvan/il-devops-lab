@@ -8,7 +8,7 @@ pipeline {
   }
 
   stages {
-    stage("build_and_deployment") {
+    stage("build_and_publish") {
       agent { node {label 'master'}}
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
@@ -21,10 +21,16 @@ pipeline {
             sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
             sh "docker push ${DOCKER_IMAGE}:latest"
         }
-
+        DOCKER_IMAGE = DOCKER_IMAGE +":"+DOCKER_TAG
         //clean to save disk
         sh "docker image rm ${DOCKER_IMAGE}:${DOCKER_TAG}"
         sh "docker image rm ${DOCKER_IMAGE}:latest"
+      }
+      steps{
+        withDockerRegistry([url: "https://"+DOCKER_IMAGE,credentialsId:credentialsId]) {
+            sh "docker pull ${DOCKER_IMAGE}:${DOCKER_TAG}"
+            sh "docker run -d --name app-test -p: 5000:5000 ${DOCKER_IMAGE}:${DOCKER_TAG}"
+        }
       }
     }
   }
