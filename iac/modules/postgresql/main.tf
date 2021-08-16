@@ -105,3 +105,11 @@ resource "aws_ssm_parameter" "default_postgres_ssm_parameter_password" {
     tags  = var.tags
     overwrite = true
 }
+resource "aws_ssm_parameter" "default_postgres_db_name" {
+    count = var.storage_credential_to_ssm ? 1 : 0
+    name  = format("/rds/db/%s/dbname", var.db_name)
+    value = aws_db_instance.rds_postgre_db.password
+    type  = "String"
+    tags  = var.tags
+    overwrite = true
+}
