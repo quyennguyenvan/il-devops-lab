@@ -9,7 +9,8 @@ class DBContext(object):
     #init the connection
     def connection(self):
         try:
-            con = psycopg2.connect(host = self.connectionDBCredential['hostname'], 
+            con = psycopg2.connect(
+                    host=self.connectionDBCredential['hostname'], 
                     database=self.connectionDBCredential['identifier'],
                     user=self.connectionDBCredential['username'],
                     password=self.connectionDBCredential['password'])

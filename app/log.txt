@@ -336,3 +336,220 @@ TypeError: The view function did not return a valid response tuple. The tuple mu
 2021-08-16 11:23:33,480 26952 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
 2021-08-16 11:23:49,327 26952 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
 2021-08-16 11:23:49,374 16820 INFO werkzeug  * Restarting with stat
+2021-08-16 18:55:18,940 11604 INFO __main__ Logger init ... OK
+2021-08-16 18:55:18,968 11604 INFO werkzeug  * Restarting with stat
+2021-08-16 18:55:19,440 6008 INFO __main__ Logger init ... OK
+2021-08-16 18:55:19,448 6008 WARNING werkzeug  * Debugger is active!
+2021-08-16 18:55:19,457 6008 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 18:55:31,548 6008 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 18:55:31,548 6008 INFO werkzeug  * Running on http://10.8.0.2:5000/ (Press CTRL+C to quit)
+2021-08-16 18:56:04,195 6008 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 18:56:04,260 11604 INFO werkzeug  * Restarting with stat
+2021-08-16 18:56:04,765 34324 INFO __main__ Logger init ... OK
+2021-08-16 18:56:04,774 34324 WARNING werkzeug  * Debugger is active!
+2021-08-16 18:56:04,781 34324 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 18:56:16,868 34324 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 18:56:16,869 34324 INFO werkzeug  * Running on http://10.8.0.2:5000/ (Press CTRL+C to quit)
+2021-08-16 18:56:40,988 34324 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 18:56:41,081 11604 INFO werkzeug  * Restarting with stat
+2021-08-16 18:56:41,590 33756 INFO __main__ Logger init ... OK
+2021-08-16 18:56:41,599 33756 WARNING werkzeug  * Debugger is active!
+2021-08-16 18:56:41,604 33756 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 18:56:47,525 33296 INFO __main__ Logger init ... OK
+2021-08-16 18:56:47,540 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 18:56:47,990 24412 INFO __main__ Logger init ... OK
+2021-08-16 18:56:47,999 24412 WARNING werkzeug  * Debugger is active!
+2021-08-16 18:56:48,004 24412 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 18:56:53,684 24412 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 18:56:53,685 24412 INFO werkzeug  * Running on http://10.8.0.2:5000/ (Press CTRL+C to quit)
+2021-08-16 18:57:16,753 24412 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 18:57:16,808 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 18:57:17,287 34784 INFO __main__ Logger init ... OK
+2021-08-16 18:57:17,297 34784 WARNING werkzeug  * Debugger is active!
+2021-08-16 18:57:17,302 34784 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 18:57:29,406 34784 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 18:57:29,406 34784 INFO werkzeug  * Running on http://10.8.0.2:5000/ (Press CTRL+C to quit)
+2021-08-16 18:57:53,980 34784 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 18:57:53] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 18:57:53,998 34784 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 18:57:53] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 18:57:54,280 34784 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 18:57:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-08-16 18:58:04,629 34784 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 18:58:04] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 18:58:16,714 34784 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 18:58:16,785 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 18:58:17,245 18096 INFO __main__ Logger init ... OK
+2021-08-16 18:58:17,254 18096 WARNING werkzeug  * Debugger is active!
+2021-08-16 18:58:17,261 18096 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 18:58:17,313 18096 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 18:58:17,314 18096 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 18:58:19,040 18096 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 18:58:19] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 18:59:01,860 18096 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\Services\\DBConnection.py', reloading
+2021-08-16 18:59:01,907 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 18:59:02,358 23144 INFO __main__ Logger init ... OK
+2021-08-16 18:59:02,367 23144 WARNING werkzeug  * Debugger is active!
+2021-08-16 18:59:02,372 23144 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 18:59:02,424 23144 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 18:59:02,424 23144 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 18:59:14,139 23144 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\Services\\DBConnection.py', reloading
+2021-08-16 18:59:14,178 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 18:59:14,643 31112 INFO __main__ Logger init ... OK
+2021-08-16 18:59:14,660 31112 WARNING werkzeug  * Debugger is active!
+2021-08-16 18:59:14,666 31112 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 18:59:14,745 31112 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 18:59:14,745 31112 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 18:59:21,164 31112 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 18:59:21,205 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 18:59:21,668 34220 INFO __main__ Logger init ... OK
+2021-08-16 18:59:21,676 34220 WARNING werkzeug  * Debugger is active!
+2021-08-16 18:59:21,682 34220 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 18:59:21,735 34220 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 18:59:21,735 34220 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 18:59:27,097 34220 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 18:59:27,148 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 18:59:27,647 33272 INFO __main__ Logger init ... OK
+2021-08-16 18:59:27,656 33272 WARNING werkzeug  * Debugger is active!
+2021-08-16 18:59:27,663 33272 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 18:59:27,717 33272 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 18:59:27,717 33272 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 18:59:30,724 33272 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 18:59:30] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 18:59:59,488 33272 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 18:59:59,537 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 18:59:59,990 2860 INFO __main__ Logger init ... OK
+2021-08-16 18:59:59,998 2860 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:00:00,006 2860 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:00:00,059 2860 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:00:00,059 2860 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:01:37,748 2860 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 19:01:37] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 19:04:56,617 2860 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:04:56,690 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:04:57,236 31176 INFO __main__ Logger init ... OK
+2021-08-16 19:04:57,245 31176 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:04:57,251 31176 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:04:57,304 31176 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:04:57,305 31176 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:05:01,553 31176 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:05:01,599 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:05:02,041 33452 INFO __main__ Logger init ... OK
+2021-08-16 19:05:02,051 33452 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:05:02,058 33452 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:05:02,110 33452 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:05:02,110 33452 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:05:03,184 33452 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:05:03,226 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:05:03,697 32328 INFO __main__ Logger init ... OK
+2021-08-16 19:05:03,706 32328 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:05:03,714 32328 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:05:03,770 32328 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:05:03,771 32328 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:05:10,178 32328 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 19:05:10] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 19:05:10,530 32328 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 19:05:10] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 19:05:38,699 32328 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:05:38,752 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:05:39,259 19460 INFO __main__ Logger init ... OK
+2021-08-16 19:05:39,269 19460 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:05:39,276 19460 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:05:39,339 19460 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:05:39,340 19460 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:05:46,799 19460 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 19:05:46] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 19:05:52,132 19460 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:05:52,180 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:05:52,608 28036 INFO __main__ Logger init ... OK
+2021-08-16 19:05:52,617 28036 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:05:52,623 28036 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:05:52,674 28036 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:05:52,674 28036 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:05:56,356 28036 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 19:05:56] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 19:06:59,333 28036 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:06:59,379 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:07:00,146 19256 INFO __main__ Logger init ... OK
+2021-08-16 19:07:00,158 19256 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:07:00,165 19256 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:07:00,220 19256 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:07:00,220 19256 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:07:05,023 19256 INFO werkzeug 127.0.0.1 - - [16/Aug/2021 19:07:05] "GET /v1/info HTTP/1.1" 200 -
+2021-08-16 19:07:16,157 19256 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:07:16,203 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:07:16,674 11536 INFO __main__ Logger init ... OK
+2021-08-16 19:07:16,683 11536 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:07:16,689 11536 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:07:16,742 11536 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:07:16,743 11536 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:07:21,070 11536 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:07:21,115 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:07:21,567 18232 INFO __main__ Logger init ... OK
+2021-08-16 19:07:21,576 18232 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:07:21,582 18232 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:07:21,633 18232 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:07:21,633 18232 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:07:29,040 18232 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:07:29,090 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:07:29,537 30400 INFO __main__ Logger init ... OK
+2021-08-16 19:07:29,545 30400 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:07:29,552 30400 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:07:29,606 30400 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:07:29,607 30400 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:07:32,860 30400 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:07:32,900 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:07:33,342 34316 INFO __main__ Logger init ... OK
+2021-08-16 19:07:33,351 34316 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:07:33,359 34316 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:07:33,416 34316 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:07:33,417 34316 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:07:36,604 34316 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:07:36,646 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:07:37,100 33508 INFO __main__ Logger init ... OK
+2021-08-16 19:07:37,108 33508 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:07:37,114 33508 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:07:37,166 33508 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:07:37,167 33508 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:07:44,660 33508 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:07:44,700 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:07:45,144 21940 INFO __main__ Logger init ... OK
+2021-08-16 19:07:45,153 21940 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:07:45,159 21940 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:07:45,216 21940 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:07:45,216 21940 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:07:49,449 21940 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:07:49,492 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:07:49,949 25032 INFO __main__ Logger init ... OK
+2021-08-16 19:07:49,958 25032 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:07:49,963 25032 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:07:50,017 25032 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:07:50,017 25032 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:07:58,539 25032 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:07:58,578 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:07:59,060 34088 INFO __main__ Logger init ... OK
+2021-08-16 19:07:59,070 34088 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:07:59,077 34088 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:07:59,132 34088 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:07:59,132 34088 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)
+2021-08-16 19:08:05,512 34088 INFO werkzeug  * Detected change in 'D:\\demo\\INFINITELAMBDA\\app\\app.py', reloading
+2021-08-16 19:08:05,559 33296 INFO werkzeug  * Restarting with stat
+2021-08-16 19:08:06,034 34608 INFO __main__ Logger init ... OK
+2021-08-16 19:08:06,044 34608 WARNING werkzeug  * Debugger is active!
+2021-08-16 19:08:06,050 34608 INFO werkzeug  * Debugger PIN: 254-202-198
+2021-08-16 19:08:06,105 34608 WARNING werkzeug  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-08-16 19:08:06,105 34608 INFO werkzeug  * Running on http://192.168.0.5:5000/ (Press CTRL+C to quit)

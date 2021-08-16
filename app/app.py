@@ -17,16 +17,20 @@ cors = CORS(app, resources={r"/v1/*": {"origins": "*"}})
 @app.route('/v1/info', methods=['GET','POST'])
 def getDBCredential():
         
-    awsService = AWSCredentialService.awsConfig()
+    AWSCredentialService.awsConfig()
     ssmService = SSMService.ssmService()
     dbInfo = ssmService.GetDBParameters()
 
     dbContext = DBContextService.dbContextService()
+    host = dbInfo[0]['Value'].split(':')[0]
+    dbName = dbInfo[1]['Value']
+    password = dbInfo[2]['Value']
+    username = dbInfo[3]['Value']
     dbContext.connectionDBCredential = {
-        "hostname": dbInfo[0]['Value'],
-        "identifier": dbInfo[1]['Value'],
-        "username": dbInfo[3]['Value'],
-        "password": dbInfo[2]['Value']
+        "hostname": host,
+        "identifier": dbName,
+        "username": username,
+        "password": password
     }
     return {"data": json.dumps("DB Info: {0}. DB Connection info: {1}".format(dbContext.getDBInfor(),dbInfo))}
 
@@ -34,6 +38,6 @@ if __name__ == '__main__':
     #load the config
     appConfig = json.load(open("Config.json"))
     Configs.config.override(appConfig)
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=False)
 
    
