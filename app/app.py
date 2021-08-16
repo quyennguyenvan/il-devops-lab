@@ -8,6 +8,7 @@ from flask import Flask, request
 from flask_cors import CORS
 
 logging.basicConfig(format='%(asctime)s %(process)d %(levelname)s %(name)s %(message)s', level=logging.INFO,filename="log.txt")
+
 logger = logging.getLogger(__name__)
 logger.info('Logger init ... OK')
 

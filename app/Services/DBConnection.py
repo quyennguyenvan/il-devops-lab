@@ -1,5 +1,6 @@
 from dependency_injector.providers import Selector
 import psycopg2
+import logging
 
 class DBContext(object):
 
@@ -19,5 +20,6 @@ class DBContext(object):
             version = cur.fetchone()
             return version
         except Exception as er:
+            logging.info("db issue: {0}".format(er))
             print('Unable to connect. Detail: {0}'.format(er))
             return "Current cur not open. please check the network or credential of connection"
