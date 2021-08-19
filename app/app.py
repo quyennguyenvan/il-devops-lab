@@ -1,4 +1,5 @@
 import json
+from botocore.compat import accepts_kwargs
 from botocore.config import Config
 import logging
 

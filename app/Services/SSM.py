@@ -5,11 +5,11 @@ from Helpers.AWSSesion import AWS_Session
 class SSM(object):
     def __init__(self,config,awsCredential):
         self.config = config
-        self.awsCredential = awsCredential
+        self.awsClient = awsCredential.Get_CredentialsByEnv()
 
     def GetDBParameters(self):
-        awsClient = self.awsCredential.Get_Credentials()
-        ssmRequest = awsClient.client('ssm', self.config['AWS']['Region'])
+       
+        ssmRequest = self.awsClient.client('ssm', self.config['AWS']['Region'])
         listParametes = ssmRequest.describe_parameters()['Parameters']
 
         parametesResult = []

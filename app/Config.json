@@ -2,7 +2,7 @@
     "AWS":{
         "awsProfileName": "quyennvdotcom",
         "Region": "ap-northeast-1",
-        "KeyID": "AKIAXA45ESJF6Z5CNWCO",
-        "KeySecret": "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"
+        "KeyID": "",
+        "KeySecret": ""
     }
 }
