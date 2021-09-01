@@ -1,0 +1,29 @@
+trigger:
+  branches:
+    include:
+      - master
+
+pool:
+  vmImage: "ubuntu-latest"
+
+variables:
+  - group: ess-dev-env
+  - name: containerRegistry
+    value: acress.azurecr.io
+  - name: tag
+    value: "$(dev.Build.Build)"
+  - name: imageRepository
+    value: ec-ess.dev
+  - name: dockerRegistryServiceConnection
+    value: ess-acr-connection #view it on service connection
+steps:
+  - task: Docker@2
+    displayName: Build and push image to registry
+    inputs:
+      command: buildAndPush
+      repository: $(imageRepository)
+      containerRegistry: $(dockerRegistryServiceConnection)
+      Dockerfile: Dockerfile
+      buildContext: ./
+      tags: |
+        $(tag)

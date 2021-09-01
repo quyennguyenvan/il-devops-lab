@@ -15,7 +15,6 @@ class AWSCredential(object):
     def Get_CredentialsByEnv(self):
         awsAccessKey = os.environ['accessKey']
         awsSecretKey = os.environ['secretKey']
-        print("{0} - {1}".format(awsAccessKey,awsSecretKey))
         logging.info('Load the credential: {0}'.format(awsAccessKey))
         awsClient = AWS_Session(awsAccessKey,awsSecretKey)
         awsClient.get_credentials()
