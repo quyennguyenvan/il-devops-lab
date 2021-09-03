@@ -11,11 +11,11 @@ variables:
   - name: containerRegistry
     value: acress.azurecr.io
   - name: tag
-    value: "$(dev.Build.Build)"
+    value: "$(Build.BuildId)"
   - name: imageRepository
     value: ec-ess.dev
   - name: dockerRegistryServiceConnection
-    value: ess-acr-connection #view it on service connection
+    value: a16a57ba-60bb-450e-b48f-1c904a9e00a9 #ess-acr-connection get the resource id on url - view it on service connection
 steps:
   - task: Docker@2
     displayName: Build and push image to registry
