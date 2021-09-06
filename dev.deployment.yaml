@@ -14,7 +14,7 @@ variables:
   - name: imageRepository
     value: ec-ess.dev
   - name: dockerRegistryServiceConnection
-    value: ess-acr-connection #view it on service connection
+    value: dev-apipython-app #view it on service connection
   - name: kubeNamespace
     value: apipython #the namespace inside the kubernetes cluster
   - name: deploymentName
