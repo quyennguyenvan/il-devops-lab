@@ -14,13 +14,16 @@ variables:
   - name: imageRepository
     value: ec-ess.dev
   - name: dockerRegistryServiceConnection
-    value: dev-apipython-app #view it on service connection
+    value: ess-acr-connection #view it on service connection
   - name: kubeNamespace
     value: apipython #the namespace inside the kubernetes cluster
   - name: deploymentName
     value: deployment-apipython
   - name: containerName
     value: app-apipython
+  - name: kubernetestEndpointConnection
+    value: dev-apipython-app
+
 steps:
   - task: Docker@2
     displayName: Build and push image to registry
