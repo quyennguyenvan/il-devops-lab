@@ -2,7 +2,6 @@ trigger:
   branches:
     include:
       - master
-
 pool:
   vmImage: "ubuntu-latest"
 
@@ -15,7 +14,13 @@ variables:
   - name: imageRepository
     value: ec-ess.dev
   - name: dockerRegistryServiceConnection
-    value: a16a57ba-60bb-450e-b48f-1c904a9e00a9 #ess-acr-connection get the resource id on url - view it on service connection
+    value: ess-acr-connection #view it on service connection
+  - name: kubeNamespace
+    value: apipython #the namespace inside the kubernetes cluster
+  - name: deploymentName
+    value: deployment-apipython
+  - name: containerName
+    value: app-apipython
 steps:
   - task: Docker@2
     displayName: Build and push image to registry
@@ -27,3 +32,14 @@ steps:
       buildContext: ./
       tags: |
         $(tag)
+  - task: Kubernetes@1
+    displayName: dev - deployment new image of schedule to AKS cluster
+    inputs:
+      connectionType: "Kubernetes Service Connection"
+      kubernetesServiceEndpoint: "ess-develop-env-connection"
+      namespace: "$(kubeNamespace)"
+      command: "set"
+      arguments: "image deployment/$(deploymentName) $(containerName)=$(containerRegistry)/$(imageRepository):$(tag)"
+      secretType: "dockerRegistry"
+      containerRegistryType: "Container Registry"
+      dockerRegistryEndpoint: "dockerRegistryServiceConnection"
