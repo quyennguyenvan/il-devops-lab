@@ -42,4 +42,4 @@ steps:
       arguments: "image deployment/$(deploymentName) $(containerName)=$(containerRegistry)/$(imageRepository):$(tag)"
       secretType: "dockerRegistry"
       containerRegistryType: "Container Registry"
-      dockerRegistryEndpoint: "dockerRegistryServiceConnection"
+      dockerRegistryEndpoint: "$(dockerRegistryServiceConnection)"
