@@ -39,7 +39,7 @@ steps:
     displayName: dev - deployment new image of schedule to AKS cluster
     inputs:
       connectionType: "Kubernetes Service Connection"
-      kubernetesServiceEndpoint: "ess-develop-env-connection"
+      kubernetesServiceEndpoint: "$(kubernetestEndpointConnection)"
       namespace: "$(kubeNamespace)"
       command: "set"
       arguments: "image deployment/$(deploymentName) $(containerName)=$(containerRegistry)/$(imageRepository):$(tag)"
