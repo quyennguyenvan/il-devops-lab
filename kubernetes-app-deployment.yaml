@@ -1,0 +1,48 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: apipython
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: apipython
+  name: deployment-apipython
+spec:
+  selector:
+    matchLabels:
+      app: app-apipython
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: app-apipython
+    spec:
+      imagePullSecrets:
+        - name: acress #this name was create on secret, command: kubectl get secret
+      containers:
+        - image: acress.azurecr.io/ec-ess.dev:8
+          imagePullPolicy: Always
+          name: app-apipython
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
+          ports:
+            - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: apipython
+  name: service-apipython
+spec:
+  ports:
+    - port: 80
+  type: LoadBalancer
+  selector:
+    app: app-apipython

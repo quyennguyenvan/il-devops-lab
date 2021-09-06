@@ -41,6 +41,6 @@ if __name__ == '__main__':
     #load the config
     appConfig = json.load(open("Config.json"))
     Configs.config.override(appConfig)
-    app.run(host='0.0.0.0', debug=False)
+    app.run(host='0.0.0.0', debug=False, port=5000)
 
    

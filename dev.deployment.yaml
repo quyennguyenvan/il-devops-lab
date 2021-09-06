@@ -22,7 +22,7 @@ variables:
   - name: containerName
     value: app-apipython
   - name: kubernetestEndpointConnection
-    value: dev-apipython-app
+    value: dev-apipython-app #the namespace inside kubernetes
 
 steps:
   - task: Docker@2
